@@ -1,12 +1,31 @@
-﻿<!DOCTYPE html>
+﻿<!DOCTYPE html> <!--定义文档类型。-->
+<!---->
 
 <html lang="en" >
+
 <head>
     <meta charset="utf-8" />
     <title>标签使用</title>
+    <link rel="stylesheet" type="text/css" href="index.css"> <!--外部样式表,link定义资源引用-->
+
+    <style type="text/css">
+        div {background-color: lightblue}
+        /*.test2 {float:left;}
+        .test3 {float:right;}*/
+        .test {background-color: lightcyan} 
+        #test {background-color: lightcyan}
+        span {background-color: lightgreen}
+        p {margin-left: 20px}
+
+    </style> <!--内部样式表 . class选择    #id 选择 -->
+
+    <p style="color: red; margin-left: 20px">This is a paragraph</p> <!--内联样式-->
 
 </head>
+
 <body>
+    <a name="tips">基本的注意事项 - 有用的提示</a><!--锚点-->
+    <div title="标题大小" class="test">
     <h1>这是一级标题</h1>
     <h2>这是二级标题</h2>
     <h3>这是三级标题</h3>
@@ -16,17 +35,237 @@
     <h5 align="left">标题标签左对齐</h5>
     <h5 align="right">标题标签右对齐</h5>
     <h5 align="center">标题标签居中</h5>
-    <em>em:斜体内容</em>
-    <i>i:斜体内容</i>
-    <cite>cite:斜体内容</cite>
+    </div> <!--标题大小,div 定义文档中的节或区域（块级）。 -->
+    
+    <div title="文本格式化标签" id="test">
+
+    <cite>cite:tag  斜体内容</cite>
     <br/>
-    <u>u:带下划线内容</u>
+    <u>u:tag    带下划线内容</u>
     <br/>
-    <strike>strike:带删除线的内容</strike>
-    <br/>
-    <sup>sup上标标签内容</sup>
-    <sub>sub下标标签内容</sub>
-    <br/>
-    <pre align="center">a        aa</pre>
+    <strike>strike:tag  带删除线的内容 H5中用del tag</strike>
+    <br />
+    <b>b:tag    This text is bold</b>
+    <br />
+    <strong>strong:tag  This text is strong</strong>
+    <br />
+    <big>big:tag    This text is big定义大号字。</big>
+    <br />
+    <em>em:tag  This text is emphasized</em>
+    <br />
+    <i>i:tag    This text is italic</i>
+    <br />
+    <small>small:tag    This text is small 定义小号字。</small>
+    <br />
+    This text contains
+    <sub>sub:tag    subscript</sub>
+    <br />
+    This text contains
+    <sup>sup:tag    superscript</sup>
+    <br />
+    <p>在某些浏览器中，当您把鼠标移至缩略词语上时，title 可用于展示表达的完整版本。</p>
+    <p>一打有 <del>del:tag 二十</del> <ins>ins:tag 十二</ins> 件。</p>
+
+    <p>大多数浏览器会改写为删除文本和下划线文本。</p>
+
+    <p>H5中应该避免使用下面这些标签和属性：</p>
+    <table>
+
+    <tr>
+    <th style="width:40%;">标签</th>
+    <th>描述</th>
+    </tr>
+
+    <tr>
+    <td>&lt;center&gt;</td>
+    <td>定义居中的内容。</td>
+    </tr>
+
+    <tr>
+    <td>&lt;font&gt; 和 &lt;basefont&gt;</td>
+    <td>定义 HTML 字体。</td>
+    </tr>
+
+    <tr>
+    <td>&lt;s&gt; 和 &lt;strike&gt;</td>
+    <td>定义删除线文本</td>
+    </tr>
+
+    <tr>
+    <td>&lt;u&gt;</td>
+    <td>定义下划线文本</td>
+    </tr>
+
+    <tr>
+    <th>属性</th>
+    <th>描述</th>
+    </tr>
+
+    <tr>
+    <td>align</td>
+    <td>定义文本的对齐方式</td>
+    </tr>
+
+    <tr>
+    <td>bgcolor</td>
+    <td>定义背景颜色</td>
+    </tr>
+
+    <tr>
+    <td>color</td>
+    <td>定义文本颜色</td>
+    </tr>
+    </table>
+    </div> <!--文本格式化标签-->
+    <div title="计算机输出标签" >
+        <p><em>&lt;kbd&gt;</em>, <em>&lt;samp&gt;</em>, 以及 <em>&lt;code&gt;</em> 元素全都支持固定的字母尺寸和间距。</p>
+        <code>code:tag 	定义计算机代码。code 元素不保留多余的空格和折行</code>
+        <br />
+        <kbd>kbd:tag  定义键盘输入。</kbd>
+        <br />
+        <tt>tt:tag   定义打字机代码。</tt>
+        <br />
+        <samp>samp:tag 定义计算机代码样本。</samp>
+        <br />
+        <var>var:tag   定义变量。</var>
+        <br />
+        <pre>
+        这是 pre:tag
+        预格式文本。
+        它保留了原格式和      空格
+和换行。
+        </pre>
+        <p>pre 标签 很适合显示计算机代码：</p>
+        <code>
+        <pre>
+var person = {
+    firstName:"Bill",
+    lastName:"Gates",
+    age:50,
+    eyeColor:"blue"
+}
+        </pre>
+        </code>
+    </div> <!--计算机输出标签-->
+
+    <div>
+    <a href="http://www.baidu.com target="_blank">This is a link</a>
+    <a href="#tips">有用的提示会跳转到上部分</a><!--a标签也可以定义锚点-->
+    
+    <p>Do not forget to buy <mark>milk</mark> today.</p> <!--mark标签 突出显示部分文本-->
+    <p>显示度量值：</p>
+    <meter value="3" min="0" max="10">8/10</meter><br>
+    <meter value="0.2">20%</meter> <!--使用 meter 元素来度量给定范围（gauge）内的数据：-->
+    <br />
+    <span>下载进度：</span>
+    <progress value="22" max="100">
+    </progress>
+    <p><b>注释：</b>Internet Explorer 9 以及更早的版本不支持 <progress></progress> 标签。</p>
+
+    <p>hr标签在 HTML 页面中创建水平线。
+        <span></span><!--定义文档中的行内的小块或区域。-->
+    </p>
+    <hr /> 
+    </div><!--a, meter, span, progress ...tag-->
+
+    <div title="HTML 引文、引用和定义元素" class="test2">
+    <abbr title="World Wide Web">WWW</abbr>
+    <br />
+    <p>
+    如果您的浏览器支持 bi-directional override (bdo)，下一行会从右向左输出 (rtl)；bdo:改变文字的方向。
+    </p>
+
+    <bdo dir="rtl">
+    Here is some Hebrew text    定义文本方向。
+    </bdo>
+    <p><dfn><abbr title="World Health Organization">WHO</abbr></dfn> 成立于 1948 年。</p>
+    <p>dfn 对缩写进行标记能够为浏览器、翻译系统以及搜索引擎提供有用的信息。</p>
+    <blockquote>
+    blockquote:tag 	定义从其他来源引用的节。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。
+    </blockquote>
+
+    <q>
+    q:tag 定义短的行内引用。
+    </q>
+
+    <p>
+    使用 blockquote 元素的话，浏览器会插入换行和外边距，而 q 元素不会有任何特殊的呈现。
+    </p>
+    <address title="定义文档作者或拥有者的联系信息。">
+    address:tag<br />
+    Written by <a href="mailto:webmaster@example.com">Donald Duck</a>.<br> 
+    Visit us at:<br>
+    Example.com<br>
+    Box 564, Disneyland<br>
+    USA
+    </address>
+    </div> <!--HTML 引文、引用和定义元素-->
+
+    <div></div><!--表单-->
+
+    
+
+    <div class="test3">
+        <img src="C:\Users\Administrator\Desktop\1.png" style="width: 200px; height: 100px" /> <!--定义图像。-->
+        <map></map> <!--定义图像地图。-->
+        <area> </area> <!--定义图像地图中的可点击区域。-->
+    </div><!--图像-->
+
+    <div></div><!--音频/视频-->
+
+    <div></div><!--链接-->
+
+    <div>
+        <ol> <!--定义有序列表。-->
+          <li>Coffee</li> <!--定义列表项。-->
+          <li>Tea</li> 
+          <li>Milk</li> 
+        </ol>
+        <ul> <!--定义无序列表。-->
+          <li>Coffee</li> <!---->
+          <li>Tea</li>
+          <li>Milk</li>
+        </ul>
+        <dl> <!--定义定义列表。-->
+           <dt>计算机</dt> <!--定义定义项目。-->
+           <dd>用来计算的仪器 ... ...</dd> <!--	定义定义的描述。-->
+           <dt>显示器</dt>
+           <dd>以视觉方式显示信息的装置 ... ...</dd>
+        </dl>
+    </div><!--列表--> 
+
+    <div>
+        <p>表格由 &lt;table&gt; 标签来定义。每个表格均有若干行（由 &lt;tr&gt; 标签定义），每行被分割为若干单元格（由 &lt;td&gt; 标签定义）。字母 td 指表格数据（table data），即数据单元格的内容。数据单元格可以包含文本、图片、列表、段落、表单、水平线、表格等等。</p>
+        <table border="1"> <!--定义表格-->
+        <colgroup span="2" align="left"></colgroup> <!--定义表格列的组。-->
+        <colgroup align="right" style="color:#0000FF;"></colgroup>
+        <thead> <!--定义表格的页眉。-->
+            <tr>  <!--定义表格的行。-->
+                <th>Heading</th> <!--表格的表头使用 <th> 标签进行定义-->
+                <th>Another Heading</th>
+            </tr>
+        </thead>
+        <tbody>	
+            <tr>
+                <td>row 1, cell 1</td> <!--定义表格单元。-->
+                <td>row 1, cell 2</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>row 2, cell 1</td>
+                <td>row 2, cell 2</td>
+            </tr>
+        </tfoot>
+        </table>
+    </div><!--表格-->
+
+    <div></div><!--样式/节-->
+
+    <div></div><!--元信息-->
+
+    <div></div><!--编程-->
+
 </body>
 </html>
+<!---->
