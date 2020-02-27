@@ -4,7 +4,10 @@
 <html lang="en" >
 
 <head>
-    <meta charset="utf-8" />
+    <!--标签都可以添加到 head 部分：<title>、<base>、<link>、<meta>、<script> 以及 <style>。-->
+    <base href="images/" />
+    <base target="_blank" /> <!--base标签为页面上的所有链接规定默认地址或默认目标（target）：-->
+    <meta charset="utf-8" /> <!--元数据（metadata）是关于数据的信息-->
     <title>标签使用</title>
     <link rel="stylesheet" type="text/css" href="index.css"> <!--外部样式表,link定义资源引用-->
 
@@ -266,6 +269,146 @@ var person = {
 
     <div></div><!--编程-->
 
+    <div>
+        <script type="text/javascript"> 
+            document.write("Hello World!")
+        </script> <!--script定义客户端脚本-->
+        <noscript>Your browser does not support JavaScript!</noscript><!--noscript 为不支持客户端脚本的浏览器定义替代内容。-->
+    </div><!--js-->
+
+    <div>
+        <h2>HTML 中有用的字符实体</h2>
+        
+        <p class="note"><span>注释：</span>实体名称对大小写敏感！</p>
+        
+        <table style="
+        margin-top: 15px;
+        border-collapse: collapse;
+        border: 1px solid #aaa;
+        width: 100%;"
+        class="dataintable">
+            <tbody><tr>
+              <th style="width:20%">显示结果</th>
+              <th style="width:20%">描述</th>
+              <th style="width:30%">实体名称</th>
+              <th style="width:30%">实体编号</th>
+            </tr>
+        
+            <tr>
+              <td>&nbsp;</td>
+              <td>空格</td>
+              <td>&amp;nbsp;</td>
+              <td>&amp;#160;</td>
+            </tr>
+        
+            <tr>
+              <td>&lt;</td>
+              <td>小于号</td>
+              <td>&amp;lt;</td>
+              <td>&amp;#60;</td>
+            </tr>
+        
+            <tr>
+              <td>&gt;</td>
+              <td>大于号</td>
+              <td>&amp;gt;</td>
+              <td>&amp;#62;</td>
+            </tr>
+        
+            <tr>
+              <td>&amp;</td>
+              <td>和号</td>
+              <td>&amp;amp;</td>
+              <td>&amp;#38;</td>
+            </tr>
+        
+            <tr>
+              <td>"</td>
+              <td>引号</td>
+              <td>&amp;quot;</td>
+              <td>&amp;#34;</td>
+            </tr>
+        
+            <tr>
+              <td>'</td>
+              <td>撇号&nbsp;</td>
+              <td>&amp;apos; (IE不支持)</td>
+              <td>&amp;#39;</td>
+            </tr>
+        
+            <tr>
+              <td>￠</td>
+              <td>分（cent）</td>
+              <td>&amp;cent;</td>
+              <td>&amp;#162;</td>
+            </tr>
+        
+            <tr>
+              <td>£</td>
+              <td>镑（pound）</td>
+              <td>&amp;pound;</td>
+              <td>&amp;#163;</td>
+            </tr>
+        
+            <tr>
+              <td>¥</td>
+              <td>元（yen）</td>
+              <td>&amp;yen;</td>
+              <td>&amp;#165;</td>
+            </tr>
+        
+            <tr>
+              <td>€</td>
+              <td>欧元（euro）</td>
+              <td>&amp;euro;</td>
+              <td>&amp;#8364;</td>
+            </tr>
+        
+            <tr>
+              <td>§</td>
+              <td>小节</td>
+              <td>&amp;sect;</td>
+              <td>&amp;#167;</td>
+            </tr>
+        
+            <tr>
+              <td>©</td>
+              <td>版权（copyright）</td>
+              <td>&amp;copy;</td>
+              <td>&amp;#169;</td>
+            </tr>
+        
+            <tr>
+              <td>®</td>
+              <td>注册商标</td>
+              <td>&amp;reg;</td>
+              <td>&amp;#174;</td>
+            </tr>
+        
+            <tr>
+              <td>™</td>
+              <td>商标</td>
+              <td>&amp;trade;</td>
+              <td>&amp;#8482;</td>
+            </tr>
+        
+            <tr>
+              <td>×</td>
+              <td>乘号</td>
+              <td>&amp;times;</td>
+              <td>&amp;#215;</td>
+            </tr>
+        
+            <tr>
+              <td>÷</td>
+              <td>除号</td>
+              <td>&amp;divide;</td>
+              <td>&amp;#247;</td>
+            </tr>
+        </tbody></table>
+        
+        <p>如需完整的实体符号参考，请访问我们的 <a href="/tags/html_ref_entities.html" title="HTML ISO-8859-1 参考手册">HTML 实体符号参考手册</a>。</p>
+    </div> <!--特殊符号表示-->
 </body>
 </html>
 <!---->

@@ -5,12 +5,13 @@
 <head>
 
 </head>
-    <frameset cols="25%,75%"> <!--框架-->
-        <frame src="frame_a.html" noresize="noresize"> <!--不可移动框架-->
+    <frameset cols="25%,50%,25%"> <!--frameset 定义了一系列行或列 cols垂直框架 rows 水平框架-->
+        <frame src="frame_a.html" noresize="noresize"> <!-- Frame 标签定义了放置在每个框架中的 HTML 文档。noresize不可移动框架-->
         <frame src="frame_b.html" name="showframe_b">  <!--frame_a.htm 包含个a链接-->
-        <frame src="frame_c.html" name="showframe_c">
-    </frameset>
+        <frame src="frame_c.html" name="showframe_b">
+    
     <noframes>
         <body>您的浏览器无法处理框架！</body>
     </noframes>
+    </frameset>
 </html>
