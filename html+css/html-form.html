@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <!--form属性
+        accept-charset	    规定在被提交表单中使用的字符集（默认：页面字符集）。
+        action	    规定向何处提交表单的地址（URL）（提交页面）。
+        autocomplete	规定浏览器应该自动完成表单（默认：开启）。
+        enctype	    规定被提交数据的编码（默认：url-encoded）。
+        method	    规定在提交表单时所用的 HTTP 方法（默认：GET）。
+        name	    规定识别表单的名称（对于 DOM 使用：document.forms.name）。
+        novalidate	    规定浏览器不验证表单。
+        target	    规定 action 属性中地址的目标（默认：_self）。
+        -->
+    <!--form元素
+        input 元素
+        select 元素（下拉列表）其中 option 元素定义待选择的选项。
+        textarea 元素定义多行输入字段（文本域）
+        button> 元素定义可点击的按钮
+        H5中加入 <datalist> <keygen> <output>
+        datalist> 元素为 <input> 元素规定预定义选项列表. input 元素的 list 属性必须引用 <datalist> 元素的 id 属性。
+        -->
+    <!--input 类型
+        text 定义供文本输入的单行输入字段
+        password 定义密码字段
+        radio 定义单选按钮。
+        checkbox 定义复选框。
+        button 定义按钮。
+      # HTML5 增加了多个新的输入类型：
+        color 用于应该包含颜色的输入字段
+        date 用于应该包含日期的输入字段。
+        datetime 允许用户选择日期和时间（有时区）。
+        datetime-local 允许用户选择日期和时间（无时区）。
+        email 用于应该包含电子邮件地址的输入字段。
+        month 允许用户选择月份和年份
+        number 用于应该包含数字值的输入字段。
+        range 用于应该包含一定范围内的值的输入字段。
+        search 用于搜索字段（搜索字段的表现类似常规文本字段）。
+        tel 用于应该包含电话号码的输入字段。
+        time 允许用户选择时间（无时区）。
+        url 用于应该包含 URL 地址的输入字段。
+        week 允许用户选择周和年。
+
+      # HTML5 中新增输入限制
+        disabled	规定输入字段应该被禁用。
+        max	        规定输入字段的最大值。
+        maxlength	规定输入字段的最大字符数。
+        min	        规定输入字段的最小值。
+        pattern	    规定通过其检查输入值的正则表达式。
+        readonly	规定输入字段为只读（无法修改）。
+        required	规定输入字段是必需的（必需填写）。
+        size	规定输入字段的宽度（以字符计）。
+        step	规定输入字段的合法数字间隔。
+        value	规定输入字段的默认值。
+
+      # HTML Input 属性
+        value 属性规定输入字段的初始值
+        readonly 属性规定输入字段为只读（不能修改）
+        disabled 属性规定输入字段是禁用的。
+        size 属性规定输入字段的尺寸（以字符计）input条长度：
+        maxlength 属性规定输入字段允许的最大长度：
+
+      # HTML5 为 <input> 增加了如下属性： 
+        autofocus 属性是布尔属性 如果设置，则规定当页面加载时 <input> 元素应该自动获得焦点。光标直接在输入框。
+        form  属性规定 <input> 元素所属的一个或多个表单。 form设置id input form属性引用id
+        formaction 属性规定当提交表单时处理该输入控件的文件的 URL。属性覆盖 <form> 元素的 action 属性
+        formenctype 属性规定当把表单数据（form-data）提交至服务器时如何对其进行编码（仅针对 method="post" 的表单）。
+        formmethod 属性定义用以向 action URL 发送表单数据（form-data）的 HTTP 方法。属性覆盖 <form> 元素的 method 属性。
+        formnovalidate 提交表单时不对 <input> 元素进行验证。属性覆盖 <form> 元素的 novalidate 属性
+        formtarget 属性规定的名称或关键词指示提交表单后在何处显示接收到的响应。覆盖 <form> 元素的 target 属性
+        height 和 width 规定 <input> 元素的高度和宽度。仅用于 <input type="image">。
+        list 属性引用的 <datalist> 元素中包含了 <input> 元素的预定义选项。使用 <datalist> 设置预定义值的 <input> 元素
+        min 和 max 规定 <input> 元素的最小值和最大值。
+        multiple 属性是布尔属性。
+        pattern (regexp) 属性规定用于检查 <input> 元素值的正则表达式。
+        placeholder 属性规定用以描述输入字段预期值的提示。该提示会在用户输入值之前显示在输入字段中。
+                    属性适用于以下输入类型：text、search、url、tel、email 以及 password。
+        required 属性是布尔属性，则规定在提交表单之前必须填写输入字段
+        step 规定 <input> 元素的合法数字间隔。
+
+        并为 <form> 增加如需属性：
+
+        autocomplete 属性规定表单或输入字段是否应该自动完成,默认打开
+        novalidate 提交表单时不对表单数据进行验证。不会去验证用户输入值
+
+        -->
+
+    <div>
+        <!--GET
+            如果表单提交是被动的（比如搜索引擎查询），并且没有敏感信息。
+        使用 GET 时，表单数据在页面地址栏中是可见的
+        GET 最适合少量数据的提交。浏览器会设定容量限制。-->
+        <!--POST
+        表单正在更新数据，或者包含敏感信息（例如密码）。
+        POST 的安全性更加，因为在页面地址栏中被提交的数据是不可见的。-->
+        <!--如果要正确地被提交，每个输入字段必须设置一个 name 属性。-->
+        <form action="action_page.php" method="post" title=" action 属性中指定表单处理程序"> <!--表单元素指的是不同类型的 input 元素、复选框、单选按钮、提交按钮等等。-->
+                First name:<br/>
+                <input title="text 定义常规文本输入." type="text" name="firstname" maxlength="5" value="readonlytest" readonly="readonly"/>
+            <br/>
+                 Last name:<br/>
+                <input type="text" name="lastname" disabled="disabled" size="10" maxlength="5"/>
+            <br/>
+                <input title="radio 定义单选按钮" type="radio" name="sex" value="male" checked="checked" />Male
+            <br/>
+                <input type="radio" name="sex" value="female"/>Female
+            <br />
+                <select name="cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="fiat">Fiat</option>
+                <option value="audi">Audi</option>
+                </select>
+            <br />
+                <textarea name="message" rows="10" cols="30" style="margin: 0px; width: 500px; height: 86px;">
+                    The cat was playing in the garden.
+                </textarea>
+            <br />
+                <input list="datalist" name="inputdatalist" />
+                <datalist id="datalist">
+                  <option value="Internet Explorer"/>
+                  <option value="Firefox"/>
+                  <option value="Chrome"/>
+                  <option value="Opera"/>
+                  <option value="Safari"/>
+                </datalist>
+            <br />
+                数量（1 到 5 之间）：
+                <input type="number" name="quantity" min="1" max="10" step="2" value="3"/>
+            <br />
+                日期：
+                <input type="date" name="bday" min="2000-01-01"  max="2020-12-31">
+            <br />
+                Select your favorite color:
+                <input type="color" name="favcolor">
+            <br />
+                Points:
+                <input type="range" name="points" min="0" max="10">
+            <br />
+                日期（月和年）：
+                <input type="month" name="bdaymonth" min="2010-01"  max="2020-12">
+            <br />
+                日期 Select a week:
+                <input type="week" name="year_week" min="2017-01-01"  max="2020-12-31">
+            <br />
+                日期 Select a time:
+                <input type="time" name="usr_time">
+            <br />
+                日期 timestamp(date and time):
+                <input type="datetime" name="bdaytime">
+            <br />
+                日期 (date and time):
+                <input type="datetime-local" name="bdaytime">
+            <br />
+                E-mail:
+                <input type="email" name="email">
+            <br />
+                Search Google:
+                <input type="search" name="googlesearch">
+            <br />
+                Telephone:
+                <input type="tel" name="usrtel"  required ="required">
+            <br />
+                Add your homepage url need add :
+                <input type="url" name="homepage" value="http://">    
+            <br />
+                <input title=" 定义用于向表单处理程序（form-handler）提交表单的按钮。" type="submit" value="Submit"/><!--表单处理程序在表单的 action 属性中指定：-->
+            <br />
+            
+        </form> 
+
+    </div><!--form表单-->
+
+    <div>
+        <form>
+            <fieldset title="元素组合表单中的相关数据">
+                <legend title="legend 元素为 <fieldset> 元素定义标题。">Personal information:</legend>
+                First name:<br/>
+                <input type="text" name="firstname" value="Mickey"/>
+                <br/>
+                Last name:<br/>
+                <input type="text" name="lastname" value="Mouse"/>
+                <br/>
+                <input type="submit" value="Submit"/>
+            </fieldset>
+        </form> 
+    </div> <!--form fieldset组合表单-->
+</body>
+</html>
