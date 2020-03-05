@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="js/showmethod.js"></script>
 </head>
-<body>
+<body onmousedown="whichButton(event)" >
+
     <p>show content</p>
     <p id="demo"></p>
+    <p id="showclick" onmouseover="mouseOver()" onmouseout="mouseOut()"></p>
+    <button onclick='document.getElementById("demo").innerHTML=Date()'>now date is ?</button>
 </body>
 </html>
