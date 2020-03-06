@@ -49,8 +49,53 @@ function mouseOut() {
     document.getElementById('showclick').innerHTML = str;
 }
 
+
+
 //字符串方法 https://www.w3school.com.cn/jsref/jsref_obj_string.asp
 //数字方法 https://www.w3school.com.cn/jsref/jsref_obj_number.asp
 //数组方法 https://www.w3school.com.cn/jsref/jsref_obj_array.asp
 //数组排序
 //数组迭代
+//
+
+
+//error 的 name 属性可返回六个不同的值：
+
+//错误名	描述
+//EvalError	已在 eval() 函数中发生的错误
+//RangeError	已发生超出数字范围的错误
+//ReferenceError	已发生非法引用
+//SyntaxError	已发生语法错误
+//TypeError	已发生类型错误
+//URIError	在 encodeURI() 中已发生的错误
+//非标准的 Error 对象属性
+//Mozilla 和 Microsoft 定义了非标准的 error 对象属性：
+
+//fileName(Mozilla)
+//lineNumber(Mozilla)
+//columnNumber(Mozilla)
+//stack(Mozilla)
+//description(Microsoft)
+//number(Microsoft)
+function err1() {
+    try {
+        adddlert("欢迎您，亲爱的用户！");
+    }
+    catch (err) {
+        document.getElementById("err").innerHTML = err.message;
+    }
+}
+function err2() {
+    try {
+        afda("xxxxxx");
+        if (2 < 3) throw "未定义afda";
+    }
+    catch (err) {
+        document.getElementById("err2").innerHTML = err;
+    }
+    finally {
+        document.getElementById("err3").innerHTML = "无论 try / catch 结果如何都执行的代码块"
+    }
+}
+err1();
+err2();
